@@ -4,6 +4,31 @@
   --gutter: 1rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: aqua;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -12,3 +37,23 @@
   padding-right: var(--gutter);
   width: 100%;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header-bg {
+  background-color: aquamarine;
+}
+
+.nav-height, .footer-height {
+  height: 5rem;
+}
+
+
+.nav-link > a {
+  margin-left: 1rem;
+}
+

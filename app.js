@@ -9,7 +9,8 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.send("hello");
+    const hello = "hello world!";
+    res.render("home", {fromServer: hello});
 });
 
-app.listen(port, () => `Server running on port ${port} 🔥`);
+app.listen(port, () => console.log(`Server running on port ${port} 🔥`));

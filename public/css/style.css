@@ -82,6 +82,11 @@ a {
   grid-gap: 1rem;
 }
 
+<<<<<<< HEAD
+.max-height {
+  height: 80vh;
+}
+=======
 .main-wrapper {
   display: grid;
   grid-template-columns: 0.3fr 1.5fr;
@@ -103,3 +108,4 @@ main {
   flex-grow: 1;
   overflow-y: auto;
 }
+>>>>>>> bbae9a0cca40ccd419ef7ecdc2ea2ce15d5f31bd

@@ -1,10 +1,29 @@
 <%- include('header.ejs') %>
-<main>
+<body>
     <div class="container">
-        <h1>Home</h1>
-        <p><%= startingContent %></p>
+        <div class="main-wrapper">
+            <div class="side-container">
+                <aside>
+                    <header>Aside</header>
+                    <nav>
+                        
+                    </nav>
+                </aside>
+            </div>
+            <main>
+                <article>
+                    <header>
+                        <h1>Starting Content</h1>
+                    </header>
+                    <section>
+                        p><%= startingContent %></p>
+                    </section>
+                </article>
+
+                
+
+            </main>
+        </div>
     </div>
-</main>
-
-
+</body>
 <%- include('footer.ejs') %>

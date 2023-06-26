@@ -33,8 +33,4 @@ app.get("/compose", (req, res) => {
   res.render("compose");
 });
 
-<<<<<<< HEAD
 app.listen(port, () => console.log(`Server running on port ${port} 🔥`));
-=======
-app.listen(port, () => console.log(`Server running on port ${port} 🔥`));
->>>>>>> bbae9a0cca40ccd419ef7ecdc2ea2ce15d5f31bd

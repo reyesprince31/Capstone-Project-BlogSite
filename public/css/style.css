@@ -90,3 +90,8 @@ a {
   grid-auto-flow: row;
   
 }
+
+
+.form-group {
+  width: 100%;
+}

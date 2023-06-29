@@ -21,9 +21,18 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  console.log(posts)
   res.render("home", { postContent: posts });
   
+});
+
+app.get("/posts/:postName", (req, res) => {
+  const requestedTitle = req.params.postName; 
+  posts.forEach((post)=> {
+    const storedTitle = post.title;
+    if (storedTitle === requestedTitle){
+      console.log('Match Found');
+    }
+  });
 });
 
 app.get("/about", (req, res) => {
@@ -42,12 +51,12 @@ app.get("/compose", (req, res) => {
 app.post("/compose", (req, res) => {
   const { postTitle, postContent } = req.body;
 
-  const post = { 
-    title: postTitle,
-    content: postContent,  
-  };
-
   if (postTitle){
+    const post = { 
+      title: postTitle,
+      content: postContent,  
+    };
+
     posts.push(post);
   }
   

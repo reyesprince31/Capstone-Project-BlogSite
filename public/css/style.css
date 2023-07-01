@@ -25,6 +25,14 @@ a {
   text-decoration: none;
 }
 
+.primary {
+  color: blue;
+}
+
+a.primary:hover {
+  color: blueviolet;
+}
+
 .container {
   display: flex;
   align-items: center;

@@ -2,40 +2,16 @@
 <body>
     <div class="container">
         <div class="main-wrapper">
-            <div class="side-container">
-                <aside>
-                    <header>Aside</header>
-                    <nav>
-                        
-                    </nav>
-                </aside>
-            </div>
             <main>
                 <article>
-<<<<<<< HEAD
                     <header>
-                        <h1>Starting Content</h1>
+                        <h1>Home Content</h1>
                     </header>
                     <section>
-                        <p><%= startingContent %></p>
+                        <p><%= startingHomeContent %></p>
                     </section>
                 </article>
-
-                <% getPosts.forEach(element => { %>
                 <article>
-                    <header>
-                        <h1><%= element.title %></h1>
-                    </header>
-                    <section>
-                        <p>
-                            <%= element.content.substring(0, 100) + "..." %>
-                            <a href="/posts/<%= element.title %>">Read More</a>
-                        </p>
-                    </section>
-                </article>
-               <% }); %>
-              
-=======
                    <% postContent.forEach((post)=> { %>
                         <h1><%= post.title %></h1>
                         <p>
@@ -45,7 +21,6 @@
                     <% }); %>
                    
                 </article>
->>>>>>> 187ac899d5886e5e9088a6b59b465d5012153998
             </main>
         </div>
     </div>

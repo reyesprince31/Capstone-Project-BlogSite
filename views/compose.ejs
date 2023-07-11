@@ -1,6 +1,7 @@
 <%- include('partials/header.ejs') %>
 <body>
     <div class="container">
+<<<<<<< HEAD
         <div class="main-wrapper">
             <div class="side-container">
                 <aside>
@@ -31,6 +32,26 @@
                 </article>
             </main>
         </div>
+=======
+
+        <div class="form-group">
+            <header>
+                <h1>Compose</h1>
+            </header>
+            <section>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="titlePost" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="titlePost" name="postTitle">
+                        <label for="contentPost" class="form-label">Post</label>
+                        <textarea class="form-control" id="contentPost" name="postContent" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publish</button>
+                </form>                      
+            </section>
+        </div>
+
+>>>>>>> 187ac899d5886e5e9088a6b59b465d5012153998
     </div>
 </body>
 <%- include('partials/footer.ejs') %>

@@ -23,6 +23,8 @@ footer {
 a {
   color: black;
   text-decoration: none;
+<<<<<<< HEAD
+=======
 }
 
 .primary {
@@ -31,6 +33,7 @@ a {
 
 a.primary:hover {
   color: blueviolet;
+>>>>>>> 187ac899d5886e5e9088a6b59b465d5012153998
 }
 
 .container {
@@ -99,7 +102,21 @@ a.primary:hover {
   
 }
 
+<<<<<<< HEAD
+aside {
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+=======
 
 .form-group {
   width: 100%;
+>>>>>>> 187ac899d5886e5e9088a6b59b465d5012153998
 }

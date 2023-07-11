@@ -1,4 +1,5 @@
 import express from "express";
+import { getCompose, POSTS } from "./compose.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,11 +15,13 @@ const contactContent =
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("home", { startingContent: homeStartingContent });
+  res.render("home", {
+    startingContent: homeStartingContent,
+    getPosts: POSTS,
+  });
 });
 
 app.get("/about", (req, res) => {
@@ -31,6 +34,28 @@ app.get("/contact", (req, res) => {
 
 app.get("/compose", (req, res) => {
   res.render("compose");
+});
+
+app.post("/compose", (req, res) => {
+  const { getTitle, getContent } = req.body;
+
+  getCompose(getTitle, getContent);
+
+  res.redirect("/");
+});
+
+app.get("/posts/:postName", (req, res) => {
+  const requestedTitle = req.params.postName;
+  POSTS.forEach((post) => {
+    const storedTitle = post.title;
+    if (storedTitle === requestedTitle) {
+      res.render("post", {
+        requestedPostTitle: post.title,
+        requestedPostContent: post.content,
+      });
+      console.log("Match Found");
+    }
+  });
 });
 
 app.listen(port, () => console.log(`Server running on port ${port} 🔥`));

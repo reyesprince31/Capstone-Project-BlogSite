@@ -4,19 +4,16 @@
         <div class="main-wrapper">
             <main>
                 <article>
-                    <header>
-                        <h1>Home Content</h1>
-                    </header>
-                    <section>
-                        <p><%= startingHomeContent %></p>
-                    </section>
+                    <h1>Home</h1>
+                    <p><%= startingContent %></p>
                 </article>
+
                 <article>
                    <% postContent.forEach((post)=> { %>
                         <h1><%= post.title %></h1>
                         <p>
                             <%= post.content.substring(0, 100) + "..." %> 
-                            <a class="primary" href="/posts/<%= post.title %>">Read More</a>
+                            <a class="primary" href="/posts/<%= post._id %>">Read More</a>
                         </p>
                     <% }); %>
                    
